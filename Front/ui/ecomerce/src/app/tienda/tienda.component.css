@@ -1,0 +1,106 @@
+/* tienda.component.css */
+
+
+.mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+.example-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95%;
+    margin-left: 3%;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  
+  img[mat-card-image-principal] {
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  @media (max-width: 850px) {
+    img[mat-card-image-principal] {
+      display: none;
+    }
+  }
+  
+  
+
+
+.product-card {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño */
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: 75%;
+  }
+  .product-content {
+    flex-grow: 1; /* Expande mat-card-content para ocupar todo el espacio disponible */
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px; /* Ajusta el espacio entre el nombre y el precio */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Trunca el texto si es demasiado largo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-family: 'Arial', sans-serif; 
+  }
+  
+  .product-price {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif; /* Cambia la fuente del precio */
+    color: #666; /* Cambia el color del texto */
+  }
+
+  /* tienda.component.css */
+
+/* tienda.component.css */
+
+/* tienda.component.css */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px); /* Cambiar a dos productos por fila en dispositivos de hasta 768px */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product {
+      width: 100%; /* Cambiar a un producto por fila en dispositivos de hasta 480px */
+    }
+  }
+  
+  

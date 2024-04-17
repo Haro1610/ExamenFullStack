@@ -1,0 +1,56 @@
+<!-- tienda.component.html -->
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isHandset$ | async">
+        
+        <mat-icon fontIcon="menu"></mat-icon>
+        
+      </button>
+  
+      <mat-menu #menu="matMenu">
+        
+
+      </mat-menu>
+      <div class="right-icons">
+        <button mat-icon-button *ngIf="isHandset$ | async">
+            <mat-icon>search</mat-icon>
+          </button>
+      
+          <button mat-icon-button *ngIf="isHandset$ | async">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+
+      </div>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title> <h2>Hombre</h2></mat-card-title>
+    </mat-card-header>
+    <img mat-card-image-principal src="https://st5.depositphotos.com/18722762/61895/v/1600/depositphotos_618957206-stock-illustration-fashion-men-outfit-fashionable-man.jpg" alt="Descripción de la imagen">
+    
+  </mat-card>
+
+
+  
+  
+  
+
+
+<mat-grid-list [cols]="cols" gutterSize="20px">
+    <mat-grid-tile *ngFor="let product of products" style="height: auto;">
+      <mat-card class="product-card">
+        <img mat-card-image [src]="product.Imagen" alt="{{ product.Nombre }}" class="product-image">
+        <mat-card-content>
+          <h3 class="product-name">{{ product.Nombre }}</h3>
+          <p class="product-price">{{ product.Precio | currency }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
